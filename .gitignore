@@ -1,0 +1,7 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/crud/.vs/crud
+/crud/crud.api/obj
+/crud.api/.vs/crud.api/FileContentIndex
