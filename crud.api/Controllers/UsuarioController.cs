@@ -1,4 +1,5 @@
-﻿using crud.api.Models;
+﻿using crud.api.Filters;
+using crud.api.Models;
 using crud.api.Models.Usuarios;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,13 +17,20 @@ namespace crud.api.Controllers
         // [SwaggerResponse(statusCode: , description: , Type = )]
         [HttpPost]
         [Route("logar")]
+        [ValidacaoModelStateCustomizado]
         public IActionResult Logar(LoginViewModelInput loginViewModelInput)
         {
+            //if (!ModelState.IsValid)
+            //{
+            //    //Retorna Apenas o menssagem de erro
+            //    return BadRequest(new ValidaCampoViewModelOutput(ModelState.SelectMany(sm => sm.Value.Errors).Select(s => s.ErrorMessage)));
+            //}
             return Ok(loginViewModelInput);
         }
 
         [HttpPost]
         [Route("registrar")]
+        [ValidacaoModelStateCustomizado]
         public IActionResult Registrar(RegistroViewModelInput registroViewModelInput)
         {
             return Created("", registroViewModelInput);
