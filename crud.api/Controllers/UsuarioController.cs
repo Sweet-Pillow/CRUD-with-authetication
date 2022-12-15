@@ -1,17 +1,31 @@
-﻿using crud.api.Models.Usuarios;
+﻿using crud.api.Models;
+using crud.api.Models.Usuarios;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace crud.api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/usuario")]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
+        [SwaggerResponse(statusCode: 200, description: "Sucesso ao autenticar", Type = typeof(LoginViewModelInput))]
+        [SwaggerResponse(statusCode: 400, description: "Campos obrigatórios", Type = typeof(ValidaCampoViewModelOutput))]
+        [SwaggerResponse(statusCode: 500, description: "Erro interno", Type = typeof(ErroGenericoViewModel))]
+        // [SwaggerResponse(statusCode: , description: , Type = )]
         [HttpPost]
+        [Route("logar")]
         public IActionResult Logar(LoginViewModelInput loginViewModelInput)
         {
-            return Created("", loginViewModelInput);
+            return Ok(loginViewModelInput);
+        }
+
+        [HttpPost]
+        [Route("registrar")]
+        public IActionResult Registrar(RegistroViewModelInput registroViewModelInput)
+        {
+            return Created("", registroViewModelInput);
         }
     }
 }

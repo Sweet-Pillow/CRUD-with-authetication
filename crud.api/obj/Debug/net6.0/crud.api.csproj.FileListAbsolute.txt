@@ -30,3 +30,7 @@ C:\Users\danie\git\CRUD-with-authetication\crud.api\obj\Debug\net6.0\refint\crud
 C:\Users\danie\git\CRUD-with-authetication\crud.api\obj\Debug\net6.0\crud.api.pdb
 C:\Users\danie\git\CRUD-with-authetication\crud.api\obj\Debug\net6.0\crud.api.genruntimeconfig.cache
 C:\Users\danie\git\CRUD-with-authetication\crud.api\obj\Debug\net6.0\ref\crud.api.dll
+C:\Users\danie\git\CRUD-with-authetication\crud.api\obj\Debug\net6.0\crud.api.Properties.Resources.resources
+C:\Users\danie\git\CRUD-with-authetication\crud.api\obj\Debug\net6.0\crud.api.csproj.GenerateResource.cache
+C:\Users\danie\git\CRUD-with-authetication\crud.api\bin\Debug\net6.0\crud.api.xml
+C:\Users\danie\git\CRUD-with-authetication\crud.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
